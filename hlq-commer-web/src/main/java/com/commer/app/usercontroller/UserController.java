@@ -50,6 +50,7 @@ public class UserController extends BaseController{
 	@SuppressWarnings("unused")
 	@RequestMapping("/submitlogin")
     public Object submitlogin(HttpServletRequest request){  
+		int i = 0;
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
         return "register";  
