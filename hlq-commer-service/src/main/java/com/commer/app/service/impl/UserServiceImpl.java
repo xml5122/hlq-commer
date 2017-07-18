@@ -8,13 +8,17 @@ import com.commer.app.entity.User;
 import com.commer.app.mapper.UserMapper;
 
 @Service
-public class UserServiceImpl implements UserService{
-	@Resource  
-    private UserMapper userMapper;
-	
+public class UserServiceImpl implements UserService {
+	@Resource
+	private UserMapper userMapper;
+
 	@Override
 	public User selectByPrimaryKey(Integer id) {
 		return userMapper.selectByPrimaryKey(id);
 	}
 
+	@Override
+	public User checkAdministratorsUser(String username, String password) {
+		return userMapper.checkAdministratorsUser(username, password);
+	}
 }

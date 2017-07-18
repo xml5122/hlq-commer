@@ -3,6 +3,7 @@ package com.commer.app.mapper;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import com.commer.app.entity.User;
@@ -108,6 +109,11 @@ public interface UserMapper {
 	 * @return
 	 */
 	Map<String, Object> selectOneByUserNumber(long userNumber);
+	
+	/**
+	 	 * 系统管理员登录后台系统认证方法
+	 	 */
+		User checkAdministratorsUser(@Param("username") String username, @Param("password") String password);
 
 	/**
 	 * 根据id修改学分
