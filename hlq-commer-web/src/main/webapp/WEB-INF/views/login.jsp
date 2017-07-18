@@ -5,13 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>登录</title>
-	<link rel="stylesheet" type="text/css" href="/css/css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="/css/css/style.css" />
-<script type="text/javascript"
-	src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
 <script type="text/javascript" src="/css/js/verificationNumbers.js"></script>
 <script type="text/javascript" src="/css/js/Particleground.js"></script>
-<script type="text/javascript" src="/css/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/css/js/login.js"></script>
+
 <script>
 	$(document).ready(function() {
 		//粒子背景特效
@@ -22,9 +21,6 @@
 		//验证码
 		createCode();
 		//测试提交，对接程序删除即可
-		$(".submit_btn").click(function() {
-			location.href = "javascrpt:;"/*tpa=http://***index.html*/;
-		});
 	});
 </script>
 <style>
@@ -33,7 +29,6 @@ body {
 	background: #16a085;
 	overflow: hidden;
 }
-
 canvas {
 	z-index: -1;
 	position: absolute;
@@ -46,10 +41,10 @@ canvas {
 			<strong>站点后台管理系统</strong> <em>Management System</em>
 		</dt>
 		<dd class="user_icon">
-			<input type="text" placeholder="账号" class="login_txtbx" />
+			<input type="text" placeholder="账号" class="login_txtbx" name="username"/>
 		</dd>
 		<dd class="pwd_icon">
-			<input type="password" placeholder="密码" class="login_txtbx" />
+			<input type="password" placeholder="密码" class="login_txtbx" name="password"/>
 		</dd>
 		<dd class="val_icon">
 			<div class="checkcode">
@@ -61,7 +56,7 @@ canvas {
 				onClick="validate();">
 		</dd>
 		<dd>
-			<input type="button" value="立即登陆" class="submit_btn" />
+			<input type="button" value="立即登陆" class="submit_btn" onclick="submitBackstageLogin()"/>
 		</dd>
 	</dl>
 </body>
@@ -75,7 +70,6 @@ canvas {
 <script type="text/javascript" src="/css/js/bootstrap.js"></script>
 <script type="text/javascript" src="/css/js/bootstrap.min.js"></script>
 </head>
-
 <body>
 <div style="    height:100px;
     line-height:100px;
