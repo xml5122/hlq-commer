@@ -285,10 +285,10 @@ small, weak {
 
 .admin_login dd .login_txtbx {
 	font-size: 14px;
-	height: 26px;
+	height: 42px;
 	line-height: 26px;
 	padding: 8px 5%;
-	width: 90%;
+	width: 100%;
 	text-indent: 2em;
 	border: none;
 	background: #5cbdaa;
@@ -359,7 +359,7 @@ small, weak {
 
 .admin_login dd .checkcode input {
 	width: 120px;
-	height: 36px;
+	height: 42px;
 	line-height: 36px;
 	padding: 3px;
 	color: white;
